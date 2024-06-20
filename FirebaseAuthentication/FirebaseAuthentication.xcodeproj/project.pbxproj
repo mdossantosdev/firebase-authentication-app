@@ -14,6 +14,7 @@
 		49415A672C20E47600E97745 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49415A662C20E47600E97745 /* Preview Assets.xcassets */; };
 		49C3763A2C24139300BB1C21 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C376392C24139300BB1C21 /* InputView.swift */; };
 		49C3763C2C24593B00BB1C21 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C3763B2C24593B00BB1C21 /* ButtonView.swift */; };
+		49C3763E2C24744600BB1C21 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C3763D2C24744600BB1C21 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		49415A662C20E47600E97745 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		49C376392C24139300BB1C21 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		49C3763B2C24593B00BB1C21 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		49C3763D2C24744600BB1C21 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				492048D02C22F8D70003F435 /* LoginView.swift */,
+				49C3763D2C24744600BB1C21 /* RegisterView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				492048D12C22F8D70003F435 /* LoginView.swift in Sources */,
 				49C3763A2C24139300BB1C21 /* InputView.swift in Sources */,
 				49C3763C2C24593B00BB1C21 /* ButtonView.swift in Sources */,
+				49C3763E2C24744600BB1C21 /* RegisterView.swift in Sources */,
 				49415A622C20E47600E97745 /* ContentView.swift in Sources */,
 				49415A602C20E47600E97745 /* FirebaseAuthenticationApp.swift in Sources */,
 			);
