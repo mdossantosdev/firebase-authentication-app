@@ -47,6 +47,12 @@ struct RegisterView: View {
             .padding(.horizontal, 16)
             .padding(.top, 12)
             
+            ButtonView(title: "SIGN UP", icon: "arrow.right") {
+                print("REGISTER")
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 24)
+            
             Spacer()
         }
     }
