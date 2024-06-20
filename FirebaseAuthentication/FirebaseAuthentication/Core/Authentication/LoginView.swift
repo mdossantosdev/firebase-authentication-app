@@ -33,7 +33,14 @@ struct LoginView: View {
                               placeholder: "Enter your password",
                               isSecureField: true)
                 }
-                .padding(.horizontal)
+                .padding(.horizontal, 16)
+                .padding(.top, 12)
+                
+                ButtonView(title: "SIGN IN", icon: "arrow.right") {
+                    print("LOG IN")
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 24)
                 
                 Spacer()
             }
