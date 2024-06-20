@@ -43,6 +43,18 @@ struct LoginView: View {
                 .padding(.vertical, 24)
                 
                 Spacer()
+                
+                NavigationLink {
+                    EmptyView()
+                } label: {
+                    HStack(spacing: 5) {
+                        Text("Don't have an account?")
+                        Text("Sign Up")
+                            .fontWeight(.bold)
+                    }
+                    .font(.footnote)
+                    .foregroundStyle(Color(.systemBlue))
+                }
             }
         }
     }
