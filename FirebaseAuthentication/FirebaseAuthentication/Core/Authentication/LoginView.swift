@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
+    @State private var email: String = ""
+    @State private var password: String = ""
+
     var body: some View {
         NavigationStack {
             VStack {
@@ -16,6 +19,21 @@ struct LoginView: View {
                     .scaledToFit()
                     .frame(width: 120)
                     .padding(.vertical, 30)
+                
+                VStack(spacing: 24) {
+                    InputView(text: $email,
+                              title: "Email Address",
+                              placeholder: "johndoe@protonmail.com")
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled(true)
+                    .keyboardType(.emailAddress)
+                    
+                    InputView(text: $password,
+                              title: "Password",
+                              placeholder: "Enter your password",
+                              isSecureField: true)
+                }
+                .padding(.horizontal)
                 
                 Spacer()
             }
