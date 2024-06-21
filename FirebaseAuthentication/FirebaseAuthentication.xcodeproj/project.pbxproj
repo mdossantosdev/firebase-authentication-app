@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49168C8F2C25937700080AE5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168C8E2C25937700080AE5 /* ProfileView.swift */; };
 		492048D12C22F8D70003F435 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492048D02C22F8D70003F435 /* LoginView.swift */; };
 		49415A602C20E47600E97745 /* FirebaseAuthenticationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49415A5F2C20E47600E97745 /* FirebaseAuthenticationApp.swift */; };
 		49415A622C20E47600E97745 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49415A612C20E47600E97745 /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49168C8E2C25937700080AE5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		492048D02C22F8D70003F435 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		49415A5C2C20E47600E97745 /* FirebaseAuthentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseAuthentication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49415A5F2C20E47600E97745 /* FirebaseAuthenticationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthenticationApp.swift; sourceTree = "<group>"; };
@@ -40,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49168C8D2C25935F00080AE5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				49168C8E2C25937700080AE5 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		492048CF2C22F83A0003F435 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				492048CF2C22F83A0003F435 /* Authentication */,
+				49168C8D2C25935F00080AE5 /* Profile */,
 				498118AE2C22F7AD007A7775 /* Root */,
 			);
 			path = Core;
@@ -217,6 +228,7 @@
 				49C3763C2C24593B00BB1C21 /* ButtonView.swift in Sources */,
 				49C3763E2C24744600BB1C21 /* RegisterView.swift in Sources */,
 				49415A622C20E47600E97745 /* ContentView.swift in Sources */,
+				49168C8F2C25937700080AE5 /* ProfileView.swift in Sources */,
 				49415A602C20E47600E97745 /* FirebaseAuthenticationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
