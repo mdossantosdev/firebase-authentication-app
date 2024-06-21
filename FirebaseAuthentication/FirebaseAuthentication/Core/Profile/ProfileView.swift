@@ -32,6 +32,14 @@ struct ProfileView: View {
                     }
                 }
             }
+            
+            Section("General") {
+                SettingsRowView(imageName: "gear",
+                                title: "Version",
+                                titleColor: .black,
+                                tintColor: .gray,
+                                text: "1.0.0")
+            }
         }
     }
 }
