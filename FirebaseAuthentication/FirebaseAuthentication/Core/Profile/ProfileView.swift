@@ -36,7 +36,7 @@ struct ProfileView: View {
             Section("General") {
                 SettingsRowView(imageName: "gear",
                                 title: "App Version",
-                                titleColor: .black,
+                                titleColor: nil,
                                 tintColor: Color(.systemGray),
                                 text: "1.0.0")
             }
@@ -44,19 +44,19 @@ struct ProfileView: View {
             Section("Device") {
                 SettingsRowView(imageName: "iphone",
                                 title: "Device Name",
-                                titleColor: .black,
+                                titleColor: nil,
                                 tintColor: Color(.systemGray),
                                 text: UIDevice.current.name)
                 
                 SettingsRowView(imageName: "cpu",
                                 title: "System Name",
-                                titleColor: .black,
+                                titleColor: nil,
                                 tintColor: Color(.systemGray),
                                 text: UIDevice.current.systemName)
                 
                 SettingsRowView(imageName: "number",
                                 title: "System Version",
-                                titleColor: .black,
+                                titleColor: nil,
                                 tintColor: Color(.systemGray),
                                 text: UIDevice.current.systemVersion)
             }
@@ -67,9 +67,9 @@ struct ProfileView: View {
                 } label: {
                     SettingsRowView(imageName: "arrow.left.circle",
                                     title: "Log Out",
-                                    titleColor: .red,
+                                    titleColor: nil,
                                     tintColor: .red,
-                                    text: "")
+                                    text: nil)
                 }
                 
                 Button {
@@ -79,7 +79,7 @@ struct ProfileView: View {
                                     title: "Delete Account",
                                     titleColor: .red,
                                     tintColor: .red,
-                                    text: "")
+                                    text: nil)
                 }
             }
         }
