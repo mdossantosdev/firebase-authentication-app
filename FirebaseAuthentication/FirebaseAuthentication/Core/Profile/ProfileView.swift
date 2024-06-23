@@ -60,6 +60,28 @@ struct ProfileView: View {
                                 tintColor: Color(.systemGray),
                                 text: UIDevice.current.systemVersion)
             }
+            
+            Section("Account") {
+                Button {
+                    print("LOG OUT")
+                } label: {
+                    SettingsRowView(imageName: "arrow.left.circle",
+                                    title: "Log Out",
+                                    titleColor: .red,
+                                    tintColor: .red,
+                                    text: "")
+                }
+                
+                Button {
+                    print("DELETE")
+                } label: {
+                    SettingsRowView(imageName: "xmark.circle",
+                                    title: "Delete Account",
+                                    titleColor: .red,
+                                    tintColor: .red,
+                                    text: "")
+                }
+            }
         }
     }
 }
