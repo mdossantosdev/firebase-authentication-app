@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsRowView: View {
     let imageName: String
     let title: String
-    let titleColor: Color
+    let titleColor: Color?
     let tintColor: Color
     let text: String?
     
@@ -19,11 +19,11 @@ struct SettingsRowView: View {
             Image(systemName: imageName)
                 .imageScale(.small)
                 .font(.title)
-                .foregroundColor(tintColor)
+                .foregroundStyle(tintColor)
             
             Text(title)
                 .font(.subheadline)
-                .foregroundStyle(titleColor)
+                .foregroundStyle(titleColor ?? .primary)
             
             Spacer()
             
@@ -35,7 +35,7 @@ struct SettingsRowView: View {
 #Preview {
     SettingsRowView(imageName: "gear",
                     title: "Version",
-                    titleColor: Color(.black),
+                    titleColor: nil,
                     tintColor: Color(.systemGray),
                     text: "1.0.0")
 }
