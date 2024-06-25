@@ -12,6 +12,7 @@ struct RegisterView: View {
     @State private var fullname: String = ""
     @State private var password: String = ""
     @State private var confirmPassword: String = ""
+    @EnvironmentObject var viewModel: AuthViewModel
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
@@ -49,7 +50,11 @@ struct RegisterView: View {
             .padding(.top, 12)
             
             ButtonView(title: "SIGN UP", icon: "arrow.right") {
-                print("REGISTER")
+                Task {
+                    try await viewModel.register(withEmail: email,
+                                                 password: password,
+                                                 fullname: fullname)
+                }
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 24)
