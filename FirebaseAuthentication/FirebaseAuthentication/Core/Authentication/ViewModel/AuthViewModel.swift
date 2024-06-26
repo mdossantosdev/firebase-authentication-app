@@ -30,10 +30,20 @@ class AuthViewModel: ObservableObject {
             self.userSession = result.user
             let user = User(id: result.user.uid, fullname: fullname, email: email)
             guard let encodedUser = try? Firestore.Encoder().encode(user) else { return }
-            
             try await db.collection("users").document(user.id).setData(encodedUser)
+            await fetchUser()
         } catch {
             print("DEBUG: Failed to create user with error \(error.localizedDescription)")
+        }
+    }
+    
+    func logout() {
+        do {
+            try Auth.auth().signOut()
+            self.userSession = nil
+            self.currentUser = nil
+        } catch {
+            print("DEBUG: Failed to sign out with error: \(error.localizedDescription)")
         }
     }
     
