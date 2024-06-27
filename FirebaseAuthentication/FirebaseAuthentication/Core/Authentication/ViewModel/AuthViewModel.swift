@@ -33,7 +33,17 @@ class AuthViewModel: ObservableObject {
             try await db.collection("users").document(user.id).setData(encodedUser)
             await fetchUser()
         } catch {
-            print("DEBUG: Failed to create user with error \(error.localizedDescription)")
+            print("DEBUG: Failed to create user with error: \(error.localizedDescription)")
+        }
+    }
+    
+    func login(withEmail email: String, password: String) async throws {
+        do {
+            let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            self.userSession = result.user
+            await fetchUser()
+        } catch {
+            print("DEBUG: Failed to sign in with error: \(error.localizedDescription)")
         }
     }
     
