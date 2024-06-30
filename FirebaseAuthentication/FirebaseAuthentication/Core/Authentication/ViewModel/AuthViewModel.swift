@@ -62,6 +62,5 @@ class AuthViewModel: ObservableObject {
         let snapshot = try? await db.collection("users").document(uid).getDocument()
         guard let user = try? snapshot?.data(as: User.self) else { return }
         self.currentUser = user
-        print("\(String(describing: currentUser))")
     }
 }
