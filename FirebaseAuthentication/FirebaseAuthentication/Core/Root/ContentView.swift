@@ -9,13 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+    @State private var isSplashPresented = true
 
     var body: some View {
         Group {
-            if viewModel.userSession != nil {
-                MainTabView()
+            if !isSplashPresented {
+                if viewModel.userSession != nil {
+                    MainTabView()
+                } else {
+                    LoginView()
+                }
             } else {
-                LoginView()
+                SplashView(isPresented: $isSplashPresented)
             }
         }
     }
