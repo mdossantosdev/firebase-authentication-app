@@ -21,7 +21,7 @@ struct ButtonView: View {
                 Image(systemName: icon)
             }
             .fontWeight(.semibold)
-            .frame(maxWidth: .infinity, maxHeight: 48)
+            .frame(maxWidth: .infinity, minHeight: 48)
             .foregroundStyle(.white)
             .background(Color(.systemBlue))
             .clipShape(RoundedRectangle(cornerRadius: 10))
