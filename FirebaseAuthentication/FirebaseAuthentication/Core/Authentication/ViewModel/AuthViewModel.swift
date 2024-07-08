@@ -57,6 +57,21 @@ class AuthViewModel: ObservableObject {
         }
     }
     
+    func delete() async throws {
+        do {
+            guard let user = Auth.auth().currentUser else { return }
+            guard let uid = Auth.auth().currentUser?.uid else { return }
+
+            try await user.delete()
+            try await db.collection("users").document(uid).delete()
+            
+            self.userSession = nil
+            self.currentUser = nil
+        } catch {
+            print("DEBUG: Failed to delete user with error: \(error.localizedDescription)")
+        }
+    }
+    
     func fetchUser() async {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let snapshot = try? await db.collection("users").document(uid).getDocument()
