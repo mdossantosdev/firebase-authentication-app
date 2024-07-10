@@ -70,8 +70,8 @@ struct ProfileView: View {
                     } label: {
                         SettingsRowView(imageName: "arrow.left.circle",
                                         title: "Log Out",
-                                        titleColor: nil,
-                                        tintColor: .red,
+                                        titleColor: Color(.systemRed),
+                                        tintColor: Color(.systemRed),
                                         text: nil)
                     }
                     
@@ -82,8 +82,8 @@ struct ProfileView: View {
                     } label: {
                         SettingsRowView(imageName: "xmark.circle",
                                         title: "Delete Account",
-                                        titleColor: .red,
-                                        tintColor: .red,
+                                        titleColor: Color(.systemRed),
+                                        tintColor: Color(.systemRed),
                                         text: nil)
                     }
                 }

@@ -23,7 +23,7 @@ struct ButtonView: View {
             .fontWeight(.semibold)
             .frame(maxWidth: .infinity, minHeight: 48)
             .foregroundStyle(.white)
-            .background(Color(.systemBlue))
+            .background(Color(.firebaseOrange))
             .clipShape(RoundedRectangle(cornerRadius: 10))
         }
     }
