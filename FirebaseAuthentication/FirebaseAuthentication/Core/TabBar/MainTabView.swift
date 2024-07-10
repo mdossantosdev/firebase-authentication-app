@@ -36,7 +36,7 @@ struct MainTabView: View {
                 .onAppear { selectedTab = 1 }
                 .tag(1)
         }
-        .tint(Color(.systemBlue))
+        .tint(Color(.firebaseOrange))
     }
 }
 

@@ -58,7 +58,7 @@ struct LoginView: View {
                             .fontWeight(.bold)
                     }
                     .font(.footnote)
-                    .foregroundStyle(Color(.systemBlue))
+                    .foregroundStyle(Color(.systemGray))
                 }
             }
         }

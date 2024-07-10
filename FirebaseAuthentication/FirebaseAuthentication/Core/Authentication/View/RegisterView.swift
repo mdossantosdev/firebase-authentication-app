@@ -70,7 +70,7 @@ struct RegisterView: View {
                         .fontWeight(.bold)
                 }
                 .font(.footnote)
-                .foregroundStyle(Color(.systemBlue))
+                .foregroundStyle(Color(.systemGray))
             }
         }
     }
