@@ -8,35 +8,26 @@
 import SwiftUI
 
 struct MainTabView: View {
-    @State private var selectedTab = 0
+    @State private var selectedTab: Tab = .home
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            Text("Home Screen")
-                .tabItem {
-                    VStack {
-                        Image(systemName: selectedTab == 0 ? "house.fill" : "house")
-                            .environment(\.symbolVariants, selectedTab == 0 ? .fill : .none)
-
-                        Text("Home")
-                    }
-                }
-                .onAppear { selectedTab = 0 }
-                .tag(0)
+            Text("Home")
+                .tag(Tab.home)
+            
+            Text("Favorite")
+                .tag(Tab.favorite)
             
             ProfileView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: selectedTab == 1 ? "person.fill" : "person")
-                            .environment(\.symbolVariants, selectedTab == 1 ? .fill : .none)
-                        
-                        Text("Profile")
-                    }
-                }
-                .onAppear { selectedTab = 1 }
-                .tag(1)
+                .tag(Tab.profile)
+            
+            Text("Settings")
+                .tag(Tab.settings)
         }
-        .tint(Color(.firebaseOrange))
+        .overlay(alignment: .bottom) {
+            TabBarView(selectedTab: $selectedTab)
+                .padding()
+        }
     }
 }
 
