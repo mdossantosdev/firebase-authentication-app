@@ -19,18 +19,28 @@ struct InputView: View {
             Text(title)
                 .foregroundStyle(Color(.darkGray))
                 .fontWeight(.semibold)
-                .font(.footnote)
+                .font(.subheadline)
             
             if isSecureField {
                 SecureField(placeholder, text: $text)
-                    .font(.system(size: 14))
+                    .textFieldStyle(CustomTextField())
             } else {
                 TextField(placeholder, text: $text)
-                    .font(.system(size: 14))
+                    .textFieldStyle(CustomTextField())
             }
-            
-            Divider()
         }
+    }
+}
+
+struct CustomTextField: TextFieldStyle {
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        configuration
+            .padding()
+            .font(.system(size: 14))
+            .fontWeight(.semibold)
+            .frame(height: 50)
+            .background(.thinMaterial)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
 
