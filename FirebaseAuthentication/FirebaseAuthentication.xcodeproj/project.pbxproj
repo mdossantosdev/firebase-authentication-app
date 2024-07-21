@@ -26,6 +26,7 @@
 		49C3763A2C24139300BB1C21 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C376392C24139300BB1C21 /* InputView.swift */; };
 		49C3763C2C24593B00BB1C21 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C3763B2C24593B00BB1C21 /* ButtonView.swift */; };
 		49C3763E2C24744600BB1C21 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C3763D2C24744600BB1C21 /* RegisterView.swift */; };
+		49E658B02C4D8CBA00A2E85B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E658AF2C4D8CBA00A2E85B /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		49C376392C24139300BB1C21 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		49C3763B2C24593B00BB1C21 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		49C3763D2C24744600BB1C21 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		49E658AF2C4D8CBA00A2E85B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				492048CF2C22F83A0003F435 /* Authentication */,
 				49168C8D2C25935F00080AE5 /* Profile */,
 				498118AE2C22F7AD007A7775 /* Root */,
+				49E658AE2C4D8C8E00A2E85B /* Settings */,
 				4931F7B62C31804A00F88C09 /* Splash */,
 				490644ED2C30124D00676781 /* TabBar */,
 			);
@@ -195,6 +198,14 @@
 				49168C902C2597B700080AE5 /* SettingsRowView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		49E658AE2C4D8C8E00A2E85B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				49E658AF2C4D8CBA00A2E85B /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +317,7 @@
 				49C3763C2C24593B00BB1C21 /* ButtonView.swift in Sources */,
 				49C3763E2C24744600BB1C21 /* RegisterView.swift in Sources */,
 				4931F7B82C318A3900F88C09 /* SplashView.swift in Sources */,
+				49E658B02C4D8CBA00A2E85B /* SettingsView.swift in Sources */,
 				490644EF2C3012D200676781 /* MainTabView.swift in Sources */,
 				49168C912C2597B700080AE5 /* SettingsRowView.swift in Sources */,
 				495553932C287BBD00C5B747 /* User.swift in Sources */,
