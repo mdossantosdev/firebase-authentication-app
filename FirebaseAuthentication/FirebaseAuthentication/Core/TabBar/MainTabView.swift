@@ -21,7 +21,7 @@ struct MainTabView: View {
             ProfileView()
                 .tag(Tab.profile)
             
-            Text("Settings")
+            SettingsView()
                 .tag(Tab.settings)
         }
         .overlay(alignment: .bottom) {

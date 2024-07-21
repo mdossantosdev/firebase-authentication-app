@@ -36,34 +36,6 @@ struct ProfileView: View {
                     }
                 }
                 
-                Section("General") {
-                    SettingsRowView(imageName: "gear",
-                                    title: "App Version",
-                                    titleColor: nil,
-                                    tintColor: Color(.systemGray),
-                                    text: "1.0.0")
-                }
-                
-                Section("Device") {
-                    SettingsRowView(imageName: "iphone",
-                                    title: "Device Name",
-                                    titleColor: nil,
-                                    tintColor: Color(.systemGray),
-                                    text: UIDevice.current.name)
-                    
-                    SettingsRowView(imageName: "cpu",
-                                    title: "System Name",
-                                    titleColor: nil,
-                                    tintColor: Color(.systemGray),
-                                    text: UIDevice.current.systemName)
-                    
-                    SettingsRowView(imageName: "number",
-                                    title: "System Version",
-                                    titleColor: nil,
-                                    tintColor: Color(.systemGray),
-                                    text: UIDevice.current.systemVersion)
-                }
-                
                 Section("Account") {
                     Button {
                         viewModel.logout()
