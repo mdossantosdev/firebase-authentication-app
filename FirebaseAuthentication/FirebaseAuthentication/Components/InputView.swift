@@ -14,16 +14,30 @@ struct InputView: View {
     let placeholder: String
     var isSecureField: Bool = false
     
+    @State var showPassword: Bool = false
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text(title)
                 .foregroundStyle(Color(.darkGray))
                 .fontWeight(.semibold)
                 .font(.subheadline)
-            
+                
             if isSecureField {
-                SecureField(placeholder, text: $text)
-                    .textFieldStyle(CustomTextField())
+                ZStack {
+                    if !showPassword {
+                        SecureField(placeholder, text: $text)
+                            .textFieldStyle(CustomTextField())
+                    } else {
+                        TextField(placeholder, text: $text)
+                            .textFieldStyle(CustomTextField())
+                    }
+                }
+                .overlay(alignment: .trailing) {
+                    Image(systemName: showPassword ? "eye.fill" : "eye.slash.fill")
+                        .padding(10)
+                        .onTapGesture { showPassword.toggle() }
+                }
             } else {
                 TextField(placeholder, text: $text)
                     .textFieldStyle(CustomTextField())
