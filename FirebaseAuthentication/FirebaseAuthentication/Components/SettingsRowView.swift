@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsRowView: View {
-    let imageName: String
+    let imageName: String?
     let title: String
     let titleColor: Color?
     let tintColor: Color
@@ -16,7 +16,7 @@ struct SettingsRowView: View {
     
     var body: some View {
         HStack(spacing: 12) {
-            Image(systemName: imageName)
+            Image(systemName: imageName ?? "")
                 .imageScale(.small)
                 .font(.title)
                 .foregroundStyle(tintColor)
