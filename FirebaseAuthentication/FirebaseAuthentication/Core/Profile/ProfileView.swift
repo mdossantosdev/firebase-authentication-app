@@ -22,43 +22,30 @@ struct ProfileView: View {
                             .frame(width: 72, height: 72)
                             .background(Color(.systemGray2))
                             .clipShape(Circle())
-                        
-                        VStack(alignment: .leading, spacing: 6) {
-                            Text(user.fullname)
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
-                                .padding(.top, 4)
-                            
-                            Text(user.email)
-                                .font(.footnote)
-                                .tint(.gray)
-                        }
                     }
                 }
                 
-                Section {
-                    SettingsRowView(imageName: "",
-                                    title: "Full Name",
-                                    titleColor: nil,
-                                    tintColor: Color(.systemGray),
-                                    text: user.fullname)
+                Section("Account") {
+                    ProfileRowView(title: "Full Name",
+                                   titleColor: .primary,
+                                   text: user.fullname)
                     
-                    SettingsRowView(imageName: "",
-                                    title: "Email",
-                                    titleColor: nil,
-                                    tintColor: Color(.systemGray),
-                                    text: user.email)
+                    ProfileRowView(title: "Email",
+                                   titleColor: .primary,
+                                   text: user.email)
+                    
+                    ProfileRowView(title: "Password",
+                                   titleColor: .primary,
+                                   text: "•••••••••••")
                 }
                 
-                Section("Account") {
+                Section {
                     Button {
                         viewModel.logout()
                     } label: {
-                        SettingsRowView(imageName: "",
-                                        title: "Log Out",
-                                        titleColor: Color(.systemRed),
-                                        tintColor: Color(.systemRed),
-                                        text: nil)
+                        ProfileRowView(title: "Logout",
+                                       titleColor: Color(.systemRed),
+                                       text: nil)
                     }
                     
                     Button(role: .destructive) {
@@ -66,11 +53,9 @@ struct ProfileView: View {
                             try await viewModel.delete()
                         }
                     } label: {
-                        SettingsRowView(imageName: "",
-                                        title: "Delete Account",
-                                        titleColor: Color(.systemRed),
-                                        tintColor: Color(.systemRed),
-                                        text: nil)
+                        ProfileRowView(title: "Delete Account",
+                                       titleColor: Color(.systemRed),
+                                       text: nil)
                     }
                 }
             }
