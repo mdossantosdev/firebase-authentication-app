@@ -13,7 +13,7 @@ struct ProfileRowView: View {
     let text: String?
     
     var body: some View {
-        HStack(spacing: 12) {
+        HStack {
             Text(title)
                 .font(.subheadline)
                 .foregroundStyle(titleColor)
@@ -21,6 +21,7 @@ struct ProfileRowView: View {
             Spacer()
             
             Text(text ?? "")
+                .font(.callout)
                 .foregroundStyle(Color(.systemGray))
         }
     }
