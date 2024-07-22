@@ -36,11 +36,25 @@ struct ProfileView: View {
                     }
                 }
                 
+                Section {
+                    SettingsRowView(imageName: "",
+                                    title: "Full Name",
+                                    titleColor: nil,
+                                    tintColor: Color(.systemGray),
+                                    text: user.fullname)
+                    
+                    SettingsRowView(imageName: "",
+                                    title: "Email",
+                                    titleColor: nil,
+                                    tintColor: Color(.systemGray),
+                                    text: user.email)
+                }
+                
                 Section("Account") {
                     Button {
                         viewModel.logout()
                     } label: {
-                        SettingsRowView(imageName: "arrow.left.circle",
+                        SettingsRowView(imageName: "",
                                         title: "Log Out",
                                         titleColor: Color(.systemRed),
                                         tintColor: Color(.systemRed),
@@ -52,7 +66,7 @@ struct ProfileView: View {
                             try await viewModel.delete()
                         }
                     } label: {
-                        SettingsRowView(imageName: "xmark.circle",
+                        SettingsRowView(imageName: "",
                                         title: "Delete Account",
                                         titleColor: Color(.systemRed),
                                         tintColor: Color(.systemRed),
