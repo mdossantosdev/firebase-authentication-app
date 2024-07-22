@@ -12,50 +12,54 @@ struct ProfileView: View {
     
     var body: some View {
         if let user = viewModel.currentUser {
-            List {
-                Section {
-                    HStack(spacing: 12) {
-                        Text(user.initials)
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(.white)
-                            .frame(width: 72, height: 72)
-                            .background(Color(.systemGray2))
-                            .clipShape(Circle())
-                    }
+            NavigationStack {
+                Text(user.initials)
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.white)
+                    .frame(width: 100, height: 100)
+                    .background(Color(.systemGray2))
+                    .clipShape(Circle())
+                
+                NavigationLink {
+                    EmptyView()
+                } label: {
+                    Text("Edit")
                 }
                 
-                Section("Account") {
-                    ProfileRowView(title: "Full Name",
-                                   titleColor: .primary,
-                                   text: user.fullname)
-                    
-                    ProfileRowView(title: "Email",
-                                   titleColor: .primary,
-                                   text: user.email)
-                    
-                    ProfileRowView(title: "Password",
-                                   titleColor: .primary,
-                                   text: "•••••••••••")
-                }
-                
-                Section {
-                    Button {
-                        viewModel.logout()
-                    } label: {
-                        ProfileRowView(title: "Logout",
-                                       titleColor: Color(.systemRed),
-                                       text: nil)
+                List {
+                    Section("Account") {
+                        ProfileRowView(title: "Full Name",
+                                       titleColor: .primary,
+                                       text: user.fullname)
+                        
+                        ProfileRowView(title: "Email",
+                                       titleColor: .primary,
+                                       text: user.email)
+                        
+                        ProfileRowView(title: "Password",
+                                       titleColor: .primary,
+                                       text: "•••••••••••")
                     }
                     
-                    Button(role: .destructive) {
-                        Task {
-                            try await viewModel.delete()
+                    Section {
+                        Button {
+                            viewModel.logout()
+                        } label: {
+                            ProfileRowView(title: "Logout",
+                                           titleColor: Color(.systemRed),
+                                           text: nil)
                         }
-                    } label: {
-                        ProfileRowView(title: "Delete Account",
-                                       titleColor: Color(.systemRed),
-                                       text: nil)
+                        
+                        Button(role: .destructive) {
+                            Task {
+                                try await viewModel.delete()
+                            }
+                        } label: {
+                            ProfileRowView(title: "Delete Account",
+                                           titleColor: Color(.systemRed),
+                                           text: nil)
+                        }
                     }
                 }
             }
