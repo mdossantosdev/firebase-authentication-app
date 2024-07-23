@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+    @State private var isShowingDialog = false
     
     var body: some View {
         if let user = viewModel.currentUser {
@@ -51,14 +52,24 @@ struct ProfileView: View {
                                            text: nil)
                         }
                         
-                        Button(role: .destructive) {
-                            Task {
-                                try await viewModel.delete()
-                            }
+                        Button {
+                            isShowingDialog = true
                         } label: {
                             ProfileRowView(title: "Delete Account",
                                            titleColor: Color(.systemRed),
                                            text: nil)
+                        }
+                        .confirmationDialog(
+                            Text("Delete Account?"),
+                            isPresented: $isShowingDialog
+                        ) {
+                            Button("Delete Account", role: .destructive) {
+                                Task {
+                                    try await viewModel.delete()
+                                }
+                            }
+                        } message: {
+                            Text("Are you sure?")
                         }
                     }
                 }
