@@ -26,6 +26,11 @@ struct ProfileView: View {
                     EmptyView()
                 } label: {
                     Text("Edit")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 80, height: 35)
+                        .background(Capsule().fill(Color.firebaseOrange))
                 }
                 
                 List {
