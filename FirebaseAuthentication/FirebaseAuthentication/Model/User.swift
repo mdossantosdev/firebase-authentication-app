@@ -11,6 +11,7 @@ struct User: Identifiable, Codable {
     let id: String
     let fullname: String
     let email: String
+    let joined: TimeInterval
     
     var initials: String {
         let formatter = PersonNameComponentsFormatter()
@@ -22,8 +23,4 @@ struct User: Identifiable, Codable {
         }
         return ""
     }
-}
-
-extension User {
-    static var MOCK_USER = User(id: UUID().uuidString, fullname: "John Doe", email: "johndoe@protonmail.com")
 }
