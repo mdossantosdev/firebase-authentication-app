@@ -44,6 +44,10 @@ struct ProfileView: View {
                         ProfileRowView(title: "Password",
                                        titleColor: .primary,
                                        text: "•••••••••••")
+                        
+                        ProfileRowView(title: "Member Since",
+                                       titleColor: .primary,
+                                       text: user.joinedDate)
                     }
                     
                     Section {
