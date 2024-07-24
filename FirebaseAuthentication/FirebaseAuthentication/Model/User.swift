@@ -23,4 +23,8 @@ struct User: Identifiable, Codable {
         }
         return ""
     }
+    
+    var joinedDate: String {
+        return Date(timeIntervalSince1970: joined).formatted(date: .long, time: .omitted)
+    }
 }
