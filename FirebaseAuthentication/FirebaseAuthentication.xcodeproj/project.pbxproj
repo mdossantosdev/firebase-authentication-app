@@ -27,6 +27,7 @@
 		49C3763A2C24139300BB1C21 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C376392C24139300BB1C21 /* InputView.swift */; };
 		49C3763C2C24593B00BB1C21 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C3763B2C24593B00BB1C21 /* ButtonView.swift */; };
 		49C3763E2C24744600BB1C21 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C3763D2C24744600BB1C21 /* RegisterView.swift */; };
+		49C992C52C50597E000E26D0 /* LoadingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C992C42C50597E000E26D0 /* LoadingImageView.swift */; };
 		49E658B02C4D8CBA00A2E85B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E658AF2C4D8CBA00A2E85B /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		49C376392C24139300BB1C21 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		49C3763B2C24593B00BB1C21 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		49C3763D2C24744600BB1C21 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		49C992C42C50597E000E26D0 /* LoadingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingImageView.swift; sourceTree = "<group>"; };
 		49E658AF2C4D8CBA00A2E85B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +201,7 @@
 				49C3763B2C24593B00BB1C21 /* ButtonView.swift */,
 				49168C902C2597B700080AE5 /* SettingsRowView.swift */,
 				492EAF0E2C4E70AD00EF9A12 /* ProfileRowView.swift */,
+				49C992C42C50597E000E26D0 /* LoadingImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				492EAF0F2C4E70AD00EF9A12 /* ProfileRowView.swift in Sources */,
 				495553932C287BBD00C5B747 /* User.swift in Sources */,
 				49415A622C20E47600E97745 /* ContentView.swift in Sources */,
+				49C992C52C50597E000E26D0 /* LoadingImageView.swift in Sources */,
 				49168C8F2C25937700080AE5 /* ProfileView.swift in Sources */,
 				49415A602C20E47600E97745 /* FirebaseAuthenticationApp.swift in Sources */,
 			);

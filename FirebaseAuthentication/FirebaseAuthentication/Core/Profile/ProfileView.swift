@@ -11,16 +11,14 @@ struct ProfileView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @State private var isShowingDialog = false
     
+    private let url = URL(string: "https://i.pravatar.cc/300?img=14")
+    
     var body: some View {
         if let user = viewModel.currentUser {
             NavigationStack {
-                Text(user.initials)
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(.white)
-                    .frame(width: 100, height: 100)
-                    .background(Color(.systemGray2))
-                    .clipShape(Circle())
+                LoadingImageView(url: url,
+                                 initials: user.initials)
+                .padding(.bottom, 10)
                 
                 NavigationLink {
                     EmptyView()
